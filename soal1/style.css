@@ -1,0 +1,339 @@
+/* Reset default browser styles */
+body, h1, h2, h3, p, ul, li, form, input, textarea, button, table, th, td, canvas, a, div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #e9ecef;
+    color: #495057;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 95%;
+    max-width: 960px;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 3.0em;
+    color: #343a40;
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: -0.5px;
+}
+
+.info {
+    color: #6c757d;
+    text-align: center;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.form-group {
+    margin-bottom: 35px;
+}
+
+label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: #343a40;
+}
+
+input[type="text"],
+textarea,
+select {
+    width: calc(100% - 24px);
+    padding: 14px;
+    border: 1px solid #ced4da;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+input[type="radio"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #007bff;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+input[type="radio"]:checked {
+    background-color: #007bff;
+}
+
+input[type="radio"]:checked::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 3px;
+}
+
+label[for^="sangat"],
+label[for="baik"],
+label[for="cukup"],
+label[for^="kurang"] {
+    font-weight: normal;
+    margin-left: 8px;
+}
+
+button[type="submit"],
+.button {
+    background-color: #007bff;
+    color: white;
+    padding: 16px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button[type="submit"]:hover,
+.button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.link-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.link-container a {
+    background-color: #f8f9fa;
+    color: #007bff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin: 0 15px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.2s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    display: inline-block;
+}
+
+.link-container a:hover {
+    background-color: #e2e6ea;
+    color: #0056b3;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+}
+
+/* Style untuk tabel data */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    overflow-x: auto; /* Enable horizontal scrolling for small screens */
+    border: 1px solid #dee2e6;
+}
+
+thead {
+    background-color: #343a40;
+    color: white;
+    font-weight: bold;
+}
+
+th, td {
+    padding: 18px 20px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+    white-space: nowrap; /* Prevent text wrapping in table cells */
+}
+
+th {
+    font-size: 1.1em;
+}
+
+td {
+    font-size: 1.0em;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* Style untuk grafik */
+.chart-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    margin-top: 40px;
+    width: 95%;
+    max-width: 700px;
+}
+
+canvas {
+    width: 100% !important;
+    height: auto !important;
+}
+
+/* Error and success messages */
+.error, .success {
+    padding: 18px 25px;
+    border-radius: 10px;
+    margin-top: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.error {
+    color: #dc3545;
+    background-color: #fde2e6;
+    border: 1px solid #dc3545;
+}
+
+.success {
+    color: #28a745;
+    background-color: #d4edda;
+    border: 1px solid #28a745;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+        border-radius: 12px;
+    }
+
+    h1 {
+        font-size: 2.6em;
+        margin-bottom: 30px;
+    }
+
+    .form-group {
+        margin-bottom: 30px;
+    }
+
+    input[type="text"],
+    textarea,
+    select,
+    button[type="submit"],
+    .button {
+        font-size: 17px;
+        padding: 14px 24px;
+        border-radius: 8px;
+    }
+
+    th, td {
+        padding: 15px 18px;
+        font-size: 0.95em;
+    }
+
+    .link-container a {
+        padding: 10px 18px;
+        border-radius: 6px;
+        font-size: 0.9em;
+        margin: 0 10px;
+    }
+
+    .chart-container {
+        padding: 30px;
+        border-radius: 12px;
+    }
+
+    .radio-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    label[for^="sangat"],
+    label[for="baik"],
+    label[for="cukup"],
+    label[for^="kurang"] {
+        display: inline;
+        margin-left: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    h1 {
+        font-size: 2.2em;
+        margin-bottom: 25px;
+    }
+
+    .form-group {
+        margin-bottom: 25px;
+    }
+
+    input[type="text"],
+    textarea,
+    select,
+    button[type="submit"],
+    .button {
+        font-size: 16px;
+        padding: 12px 20px;
+        border-radius: 6px;
+    }
+
+    th, td {
+        padding: 12px 15px;
+        font-size: 0.9em;
+    }
+
+    .link-container a {
+        display: block;
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+}
